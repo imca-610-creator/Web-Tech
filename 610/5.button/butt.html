@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>registration</title>
+<style>
+
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.TABLE {
+width: 450px;
+padding: 20px;
+border: 1px solid black;
+}
+
+h2 {
+text-align: center;
+margin-bottom: 20px;
+}
+
+label {
+display: block;
+margin-top: 12px;
+font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+
+textarea {
+width: 100%;
+}
+
+.options label {
+display: inline-block;
+}
+
+.buttons {
+text-align: center;
+margin-top: 20px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+padding: 10px 25px;
+ cursor: pointer;
+}
+
+input[type="submit"] {
+background: green;
+}
+input[type="reset"] {
+background: red;
+}
+</style>
+</head>
+<body>
+
+<div class="TABLE">
+<h2>User Registration Form</h2>
+<form>
+
+<label>Full Name</label>
+<input type="text" placeholder="Enter your name" required>
+
+<label>Email</label>
+<input type="email" placeholder="Enter your email" required>
+
+<label>Password</label>
+<input type="password" placeholder="Enter password" required>
+
+<label>Gender</label>
+<div class="options">
+<label><input type="radio" name="gender"> Male</label>
+<label><input type="radio" name="gender"> Female</label>
+</div>
+
+<label>Hobbies</label>
+<div class="options">
+<label><input type="checkbox"> Reading</label>
+<label><input type="checkbox"> Sports</label>
+<label><input type="checkbox"> Music</label>
+</div>
+
+<label>country</label>
+<select>
+<option>Select Country</option>
+<option>India</option>
+<option>saudi</option>
+<option>argentina</option>
+<option>portugal</option>
+<option>brazil</option>
+</select>
+
+<label>Address</label>
+<textarea rows="4" placeholder="Enter your address"></textarea>
+<div class="buttons">
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</div>
+
+</form>
+</div>
+</body>
+</html>

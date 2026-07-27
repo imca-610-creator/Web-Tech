@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Prime and Palindrome</title>
+</head>
+<body>
+
+<input type="text" id="array" placeholder="Enter numbers">
+<button onclick="find()">Submit</button>
+
+<h3 id="prime"></h3>
+<h3 id="palindrome"></h3>
+
+<script>
+function find() {
+    let arr = document.getElementById("array").value.split(",");
+    let prime = [];
+    let palindrome = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        let n = parseInt(arr[i]);
+
+        let p = true;
+        if (n < 2) p = false;
+        for (let j = 2; j < n; j++) {
+            if (n % j == 0) {
+                p = false;
+                break;
+            }
+        }
+        if (p) prime.push(n);
+
+        let rev = n.toString().split("").reverse().join("");
+        if (n == rev)
+            palindrome.push(n);
+    }
+
+    document.getElementById("prime").innerHTML = "Prime: " + prime;
+    document.getElementById("palindrome").innerHTML = "Palindrome: " + palindrome;
+}
+</script>
+
+</body>
